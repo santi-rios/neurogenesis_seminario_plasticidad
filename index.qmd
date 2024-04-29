@@ -1,0 +1,593 @@
+---
+format: 
+  revealjs:
+    embed-resources: true
+    transition: slide # fade/slide/convex/concave/zoom/none
+    preview-links: true # navegar links dentro de la misma presentación (iframe)
+    progress: true # mostrar barra de progreso
+    scrollable: true # desplazar verticalmente diapositivas
+    # incremental: true # listas aparecen de uno en uno
+    theme: night # beige/blood/dark/league/moon/night/serif/simple/sky/solarized
+preload-iframes: true
+date: "today"
+editor: source
+editor_options: 
+  chunk_output_type: console
+execute:
+  echo: true  
+  warning: false
+  cache: true
+bibliography: references.bib
+# revealjs-plugins:
+#   - pointer # requiere instalación. activar con q
+---
+
+
+#  {background-iframe="./stars/dist/index.html" background-interactive="False"}
+
+
+Fluoxetine effects on molecular, cellular and behavioral endophenotypes of depression are driven by the living environment
+
+
+## Igor Branchi
+
+::: columns
+::: {.column width="30%"}
+![igor](https://ebbs-science.org/_images/people/Igor_Branchi.jpg)
+:::
+
+::: {.column width="70%"}
+::: incremental
+-   Líder del Grupo en el Centro de Ciencias del Comportamiento y Salud Mental, Instituto Italiano de Salud, Roma, Italia.
+
+-   Enfoque especial en las interacciones entre plasticidad neuronas, medicamentos, ambiente y conducta.
+:::
+:::
+:::
+
+::: footer
+[Sitio web de Igor](https://www.igorbranchi.org/)
+
+[Twitter de Igor](https://twitter.com/IgorBranchic)
+:::
+
+# Artículos principales
+
+## The double-edged sword of neural plasticity
+
+@branchi2011 y @branchi2022
+
+::: incremental
+-   Los niveles altos de plasticidad inducidos por medicamentos, como los antidepresivos serotoninérgicos y los psicodélicos, no son beneficiosos por sí mismos.
+-   Una alta plasticidad hace que el cerebro y el comportamiento sean más susceptibles a cambios según factores contextuales, como las condiciones de vida.
+:::
+
+## A mathematical formula of plasticity: Measuring susceptibility to change in mental health and data science
+
+@branchi2023 y @dellicolli2024
+
+::: incremental
+-   Propuesta de fórmula matemática para evaluar la plasticidad, entendida como la susceptibilidad al cambio.
+-   Permite identificar, desde un inicio, qué individuos o poblaciones son más propensos a modificar sus resultados conductuales según las terapias o factores contextuales.
+:::
+
+## Uncovering the determinants of brain functioning, behavior and their interplay in the light of context
+
+@branchi2024 y @branchi2024a
+
+::: incremental
+-   Los sustratos, desde los genes hasta las áreas cerebrales, no tienen un vínculo causal directo con las respuestas conductuales complejas.
+-   Mientras el contexto impulsa el comportamiento, los sustratos biológicos limitan el repertorio conductual que se puede implementar.
+:::
+
+## Otros artículos interesantes de su laboratorio
+
+-   Biomarkers of **stress resilience**: A review [@paribello2024]
+
+-   An **evolutionary perspective** for contemporary psychiatric research @enricoalleva2011
+
+-   **Epigenetic** modifications induced by early enrichment are associated with changes in timing of induction of *BDNF* expression @branchi2011a
+
+# Introducción
+
+@alboni2017
+
+## SSRI - Inhibidor selectivo de la recaptación de serotonina
+
+::: incremental
+-   Fármacos más prescritos para trastornos de depresión y ansiedad.
+-   Mecanismo de acción inmediato: incrementan la concentración de serotonina.
+-   Mecanismo de acción antidepresiva parece involucrar mecanismos de **plasticidad**
+:::
+
+## Problemáticas
+
+::: incremental
+-   60-70% de los pacientes no experimentan remisión clínica (continúan experimentando síntomas depresivos después de semanas de tratamiento).
+    -   Evaluada con escalas de severidad (ej *Hamilton Rating Scale for Depression*) [@Zimmerman2006]
+    -   Estudio más grande sobre antidepresivos (STAR\*D) utilizó un protocolo de HRSD que DUPLICÓ los estimados de remisión de los pacientes [@pigott2023]
+
+-   30-40% no muestran respuesta a los medicamentos.
+
+-   Algunos autores han comparado su eficacia con placebos. [@Kirsch2019]
+:::
+
+## Poco entendimiento de su mecanismo de acción
+
+::: incremental
+-   El grupo de Albani propone que hay un poco entendimiento de las vías involucradas en su mecanismo:
+    -   conductuales, neurogénesis, BDNF, HPA, LTP
+:::
+
+## Hipótesis de suceptibilidad unidireccional al cambio
+
+::: incremental
+-   Antidepresivos no cambian el estado de ánimo por sí mismos
+
+    -   Crean una ventana de oportunidad para el cambio
+
+    -   Esta a su vez puede ser influenciada por el ambiente, positivo o negativo
+
+    -   Ver más en revisión de @branchi2011b
+
+    -   P*sicoplastógenos* (Ketamina, LSD, Psilocibina, Iboga, DMT...) tendrían el mismo mecanismo antidepresivo [@carhart-harris2018].
+:::
+
+## Objetivos
+
+::: incremental
+-   Estudiar la *Hipótesis de suceptibilidad unidireccional al cambio* evaluando vías moleculares y celulares afectadas por la administración de SSRI, como expresión de BDNF, neurogénesis, LTP y conducta.
+
+-   Enfoque en el hipocampo por su importancia en procesos de plasticidad y depresión.
+:::
+
+# Diseño experimental
+
+## Animales
+
+
+Ratones C57BL/6 (12-15 semanas) expuestos a 14 días de estrés (fenotipo de tipo depresivo) seguido de 21 días de 1) ambiente enriquecido, o 2) ambiente estresante.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Black_6_mouse_eating.jpg/1503px-Black_6_mouse_eating.jpg)
+
+## Conducta
+
+
+::: incremental
+-   Anhedonia
+
+    -   Liking-type anhedonia - Saccharin (0.1%) 
+
+    -   Wanting-type anhedonia - Progressive Ratio: the drive for obtaining a reward
+        -   Incremento multiplicativo incrementa el número necesario para obtener el reforzador (saccharin) 
+
+-   Cognitive Bias
+
+    -   discriminar entre 2 luces (azul y amarillo)
+    -   Una de estas luces presenta una recompenza, la otra un castigo (aire)
+    -   Después de que aprenden a discriminar, se presenta un estímulo ambiguo
+    -   Explorar el estímulo ambiguo se considera un bias "optimista", mientras que no explorarlo es un bias "pesimista"
+:::
+
+## Fluoxetina en agua (30 mg/kg), 3 semanas {.smaller}
+
+![](figs/here _comes_the_prozac.mp4){.absolute top=200 left=0 width="400" height="350"}
+
+![](figs/prozac.jpg){.absolute top=60 right=50 width="250" height="300"}
+
+![](figs/im_on_prozac.jpg){.absolute bottom=0 right=40 width="400" height="300"}
+
+## Inmunos
+
+::: incremental
+-   ki67 (proliferación, proteína nuclear expresada en todas las fases del ciclo celular menos `G0`)
+
+-   DCX (neuroblastos en migración y neuronas jóvenes)
+
+    -   No es considerado un marcador de neurogénesis per se (combinar con otros marcadores, como BrdU), ver @ohira2019
+
+-   Problemáticas de ki67 y DCX en humanos (poblaciones neuronales "dormantes" se han detectado con estos marcadores en nichos no neurogénicos (corteza, amígdala) [@ghibaudi2023].
+:::
+
+
+## RT-PCR (transcriptasa reversa)
+
+-   RNA -> DNA
+
+-   RNA total del hipocampo
+
+![](https://upload.wikimedia.org/wikipedia/commons/a/ab/Polymerase_chain_reaction-en.svg)
+
+## Western blot
+
+-   Detectar proteínas en hipocampo y corteza prefrontal.
+
+![](figs/western_blot_fail.jpg){fig-align="center"}
+
+
+## Electro
+
+- ![](figs/stratum.jpg)
+
+::: incremental
+- Electrodo en *stratum radiatum* (contiene las sinapsis en CA1 que son potenciadas y estudiadas en modelos de LTP por estimulación de CA3 - colaterales de Schaffer)
+
+-   registros *orthodromically-evoked * fEPSPs
+    
+    -   Orthodromic: dirección de la propagación. Impulso que viaja en la dirección "natural" (soma - axón - terminal).
+    - Evocado: respuesta es inducida.
+    - fEPSPs (field Excitatory Postsynaptic Potentials): potenciales registrados en el espacio extracelular (campo) cerca de las neuronas. representan la suma excitatoria de inputs recibidos por un grupo de neuronas, manifestandose como cambios en el voltaje. 
+
+:::
+
+
+
+# Resultados
+
+## Efectos contrarios de FLX sobre conductas de tipo depresivas en condiciones enriquecidas y estresantes {.smaller}
+
+![Figura 1](figs/fig_1.png){fig-align="center"}
+    
+::: {.notes}
+-   A. Condición enriquecida
+
+-   B. Condición con estrés
+
+-   C. liking-type anhedonia (saccharin)
+
+    -   Sin diferencias significativas
+
+-   D. wanting-type anhedonia (progressive ratio)
+
+    -   FLX reduce anhedonia (mayor punto de quiebre) en condición enriquecida a la semana
+
+-   E. cognitive bias
+
+    -   FLX más optimistico en EE (responde más a estímulo ambiguo).
+
+:::
+
+##  {background-iframe="colored-particles/index.html"}
+
+::: {style="background-color: #000000; border-radius: 10px; padding: 5px;"}
+
+::: incremental
+- En condiciones estrsantes, FLX parece empeorar fenotipo depresivo en comparación de vehículo. 
+
+
+
+- Sucrose instead of saccharin to assess anhedonia. 
+
+
+- SSRIs affect metabolism leading to an increased caloric intake and thus to an increased preference for sucrose that is independent from the anhedonic state
+:::
+
+:::
+
+## FLX en estrés reduce proliferación y reduce volumen de CA1 {.smaller}
+
+![Figura 2](figs/fig_2.png){fig-align="center"}
+
+
+::: {.notes}
+-   A\) Giemsa (ácidos nucléicos), Ki67, DCX
+
+-   B\) Ki67 no fue afectado por FLX en EE, pero si decrece en FLX estrés.
+
+-   C\) DCX no fue afectado por FLX
+
+-   D\) hipocampo aplanado
+
+-   E\) Analysis of anatomically aligned data of volumetric measurements showed no significant differences between groups in enriched condition. However, septal CA1 volume was significantly reduced in FLX compared with VEH when treatment was administered in stressful condition
+
+
+:::
+
+
+##  {background-iframe="glittering-sea/index.html"}
+
+::: {style="background-color: #000000; border-radius: 10px; padding: 5px;"}
+
+::: incremental
+-   FLX redujo volumen de CA1 en condición estrés comparado con control.
+
+-   Actividad antidepresiva de FLX puede ser independiente de NG
+
+    -   [@neurogenesisdependentdavid2009], [@marlatt2013], [@cowen2008]
+
+-   Parece que en condiciones estresantes, FLX es detrimental para la proliferación.
+:::
+
+:::
+
+
+## Efectos de FLX en vias antidepresivas depende de la calidad del ambiente {.smaller}
+
+![Fig 3](figs/fig_3.png){fig-align="center"}
+
+::: {.notes}
+-   A\) No significant treatment effect was found for pERK1/ERK1 and in pERK2/ERK2 ratios in the enriched condition. Whereas both ratios were reduced in the cytoplasmic, but not in the nuclear, fraction in FLX mice in the stressful condition
+
+    -   enriched condition, the FLX-induced increase of the phosphoERK2/ERK2 ratio in the hippocampal
+
+    -   ERKs are known to activate many transcription factors
+
+    -   Activation of the MAPK-ERK pathway phosphorylates proteins involved in transcriptional and translational regulation, dendritic organization, cellular excitability, long-term potentiation and depression, neuronal survival, synaptogenesis and neurotransmitter release
+
+    -   In this way, **ERK activation contributes to synaptic plasticity** and connectivity, processes impaired in schizophrenia [@pereira2011]
+
+-   \(b\) No treatment effect on CREB phosphorylation was observed in the nuclear enriched fraction in both environmental conditions. No difference in the total hippocampal CREB protein levels was found in the enriched condition, but it was reduced by treatment in the stressful condition
+
+    -   is a cellular transcription factor. It binds to certain DNA sequences called cAMP response elements (CRE), thereby increasing or decreasing the transcription of the genes.
+
+    -   transcription is regulated by CREB include: c-fos, BDNF, tyrosine hydroxylase, numerous neuropeptides
+
+    -   CREB has a well-documented role in neuronal plasticity and long-term memory formation in the brain and has been shown to be integral in the formation of spatial memory.
+
+-   \(c\) In enriched conditions, reduced proBDNF and increased mBDNF levels were found in FLX mice compared with vehicle (VEH) mice. No difference in the stressful condition
+
+        -   BDNF effects on synaptic LTP which require mitogen-activated protein kinase (MAPK) extracellular signal-regulated protein kinase (ERK) activation
+
+        -   Historically, the presynaptic effects of BDNF have been greatly attributed to modulation of the efficiency of vesicular glutamate release in mammalian synapses, including within the hippocampus
+
+        -   Postsynaptic functions of BDNF in synaptic plasticity are that BDNF modulates the glutamate receptors.
+
+        -   BDNF has been shown to stimulate the proliferation of NPCs and promote long-term survival of their progeny [@yang2020]
+
+-   d and e. Real-time PCR analysis revealed that BDNF and p11 mRNA levels were significantly increased by FLX in the enriched condition but were not affected in the stressful condition
+
+        -   also known as S100A10
+
+        -   p11 in both the amplification of serotonergic signaling
+
+        -   p11 is expressed in interneurons GABAergic and cholinergic interneurons and in monoaminergic, cholinergic, glutamatergic and GABAergic projection neurons [@svenningsson2013]
+
+        -   High BDNF levels induced by antidepressants have been reported to increase p11
+
+-   \(f\) Representative western blottings are shown
+
+-   g\) Corticosterone levels were significantly reduced by treatment in FLX compared with VEH mice in the enriched but not in the stressful condition.
+
+-   h\) Glucocorticoid receptor (GR) mRNA expression was reduced by treatment in the stressful condition. No difference for GR expression in the enriched condition and mineralocorticoid receptor (MR) expression in both condition was found. MR, mineralocorticoid receptor
+
+        -   Hyperactivation of the HPA axis, which leads to increased glucocorticoid levels, is a common feature in major depression
+
+        -   reduced by FLX, compared with VEH, in the enriched
+
+        -   Glucocorticoids exert their effects on the hippocampus, including regulation of HPA axis activity and synaptic plasticity, by binding two receptor systems: the high-affinity mineralocorticoid receptor and the low-affinity glucocorticoid receptor (GR)
+
+        -   Activation of hippocampal GR causes inhibition of the HPA axis.
+
+        -   chronic FLX treatment increases GR mRNA expression in the hippocampus, possibly contributing to restore HPA axis feedback
+
+        -   FLX reduced GR, but not mineralocorticoid receptor, mRNA levels (t = − 2.558, P = 0.0228) in the stressful condition
+:::
+
+
+
+##  {background-iframe="hello-matrix/index.html"}
+
+::: {style="background-color: #000000; border-radius: 10px; padding: 5px;"}
+
+::: incremental
+- FLX potencia estas vías en general en condición enriquecida, mientras que parece que pasa lo opuesto en condición estresante
+
+- FLX modifies molecular and cellular correlates of synaptic plasticity in an environment-dependent manner.
+:::
+:::
+
+
+## Interacción entre calidad de ambiente y FLX influye sobre receptores y LTP {.smaller}
+
+![Fig 4](figs/fig_4.png){fig-align="center"}
+
+
+::: {.notes}
+
+
+
+
+
+
+
+
+
+
+-   \(a\) Hippocampal levels of AMPA receptor subunits GluR1 and GluR2, and
+
+     - as AMPA and NMDA "are regulated during activity-dependent plasticity, we evaluated the effects of FLX on excitatory receptor subunits. Overall, we did not observe any significant FLX effect on total hippocampal GluR1 and GluR2 subunit levels
+     
+     - AMPA receptor functionality is regulated by phosphorylation, we measured the phosphorylation levels on the GluR1 and GluR2 subunits. Ser845 phosphorylation on GluR1 subunit was increased in the enriched (t = 2.490, P = 0.0259) and decreased in the stressful condition. Ser845 is a specific target of FLX. unctional consequences of the phosphorylation site modulation depend on the previous history of the synapse.66 [@Lee2000].
+     
+     - increaseintheGluNR2A/GluNR2Bratioandtheinsertionof the GluNR1 subunits have been associated to an enhanced LTP, [@Peng2010]
+
+-   b\) their phosphorylation measured by western blotting. FLX induced opposite effects on GluR1 phosphorylation at Ser 845 according to the quality of the environment
+
+-   \(c\) Hippocampal levels of NMDA receptor subunits GluN1, GluN2A and GluN2B measured by western blotting. (
+
+    -   FLX increases GluN2A and GluNR1 subunits, in the stress condition, while reducing GluN2B (t = − 2.830, P = 0.0151) in enrichment (Figure 4c
+
+    -   increaseintheGluNR2A/GluNR2Bratioandtheinsertionof the GluNR1 subunits have been associated to an enhanced LTP,
+
+-   d\) Representative western blots.
+
+-   e\) FLX increased paired-pulse ratio in the stressful condition but had no effect in the enriched condition
+
+    -   Paired-pulse ratio (PPR) depends on the probability of vesicular release at synapse [@tahmasebi2016]
+
+    -   When a synapse is stimulated in rapid succession, the second post-synaptic response can be larger than the first and termed paired-pulse facilitation. It has been reported that the paired-pulse ratio (PPR), which is the ratio of the amplitude of the second response to that of the first, depends on the probability of vesicular release at the synapse, and PPR has been used as an easy measure of the release probability. [@manita2007]
+    
+    - analyzed the intrinsic excitability of the CA1 pyramidal cells by measuring the stimulation intensity at which a population spike is first observed. Paired-pulse ratio, generally associated with changes in transmitter release probability,70 was significantly increased in FLX compared with VEH mice in the stressful (t = − 3.306, P = 0.002) but not in the enriched condition
+
+-   \(f\) FLX affect CA1 plasticity in mice exposed to stress condition. In the enriched condition, both FLX and VEH mice developed a robust LTP 45 min after stimulation (single 100 Hz burst; VEH: n = 12/5; FLX: n = 11/5). In the stressful condition, FLX mice showed a remarkable increase in the LTP amplitude compared with VEH (VEH: n = 14/6; FLX: n = 10/5). Arrows indicate time of application of HFS. fEPSP, field excitatorypostsynaptic potential; PPR, paired-pulse ratio
+
+    -   we explored CA1 plasticity inducing LTP by weak stimulation (single 100 Hz burst) of Shaffer Collateral inputs. enriched condition, the experimental groups did not differ, both exhibiting a robust LTP (Figure 4f), in line with the literature reporting that enrichment enhances LTP amplitude evoked by a" (Alboni et al., 2017, p. 556) weak stimulation.
+
+    -   stressful condition, FLX mice showed a significantly increased LTP amplitude compared with VEH mice (t = − 3.813, P = 0.002) that displayed a slight potentiation following the stimulation (Figure 4f).
+
+
+
+
+
+
+:::
+
+
+##  {background-iframe="grid-worms/index.html"}
+
+::: {style="background-color: #000000; border-radius: 10px; padding: 5px;"}
+
+::: incremental
+-   FLX treatment induced an overall increase in the absolute size of field excitatorypostsynaptic potential. FLX-mediated enhancement of the synaptic strength.
+
+-   Overall, these results demonstrate that also the effects of FLX on short- and longterm plasticity in the CA1 region are dependent on the quality of the environment
+
+
+
+:::
+
+:::
+## FLX en condiciones estándar {.smaller}
+
+![Fig S5a](figs/Fig_S5a.jpg){fig-align="center"}
+in the standard condition, FLX did not increase BDNF levels, suggesting that enrichment drives the FLX effects more powerfully than the improvement associated to the standard condition following chronic stress (Supplementary Figure S5)
+
+# Discusión
+
+
+##
+
+![Tabla 1](figs/tab_1.png){fig-align="center"}
+
+Shifts from an "uncertain situation (that is, the stress) to a neutral one (that is, the standard condition) leads to an increase in the ability of the organism to cope and control the environment and can thus have beneficial effects
+
+-   Ver [Stress: Appraisal and Coping, Lazarus y Folman](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1005-9_215)
+
+::: {.notes}
+-   effects of the SSRI FLX are highly dependent on the quality of the living environment.
+
+-   enriched condition led to a significant recovery from the depression-like phenotype compared with VEH
+
+    -   nteraction of the drug with the quality of the environment
+
+-   FLX treatment under stress led to a worsening of the depression-like phenotype (molecular to behavior)
+
+-   mechanisms mediating the improvement and the worsening of the depressive status may differ
+
+    -   BDNF levels were increased in the enriched, but not affected in the stressful condition
+
+    -   neurotrophin are modified by FLX treatment in an enriched but not in a constantly stressful environment
+    
+    
+    -   Stress has been defined traditionally either as a stimulus, often referred to as a stressor, that happens to the person such as a laboratory shock or loss of a job, or as a response characterized by physiological arousal and negative affect, especially anxiety.
+
+Stress: Appraisal and Coping, Lazarus y Folman
+    -   Richard Lazarus defined stress as a relationship between the person and the environment that is appraised as personally significant and as taxing or exceeding resources for coping.
+
+    -   This definition is the foundation of stress and coping theory (Lazarus & Folkman, [1984](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1005-9_215#ref-CR02158 "Lazarus, R. S., & Folkman, S. (1984). Stress, appraisal, and coping. New York: Springer."))
+
+:::
+
+## Neurogénesis
+
+::: incremental
+-   neurogenesis, were affected only when the drug was administered in the stressful environment
+
+    -   resultados inconclusos relacionados a neurogénesis y antidepresivos [@neurogenesisdependentdavid2009a; @marlatt2013; @Wu2014]
+
+::: 
+
+## Antidepresivos y neurogénesis {.smaller}
+
+![carli,2021](figs/carli,2021.jpg)
+## 
+
+::: incremental
+-   5-HT1A y 5-HT4 incrementan BDNF. Bloquear estos receptores reduce efectos neurogénicos de fluoxetina [Ménsez-David, 2013](https://www.nature.com/articles/npp2013332)
+
+-   Neuronas de GD neurons expresan diferentes receptores de 5-HT (5-HT1A, 5-HT4, 5-HT2A, 5-HT2C y 5-HT7)
+
+-   Incremento de 5-HT por SSRI activa 5HT1A en neuronas maduras de la GCs, (Gi que silencían actividad neuronal (GIRKs) e inhiben función del GD, similar a función de neuronas jóvenes.
+
+- SSRI producen más efectos plasticos: sinaptogénesis en PFC y amígdala, remodelamiento de espinas dentríticas en hipocampo http://dx.doi.org/10.1016/j.brainresbull.2018.09.002\]
+:::
+
+## LTP
+
+-   stressful condition, FLX significantly enhances plasticity in the CA1 region in comparison with VEH
+
+-   enriched condition, both groups exhibited a robust LTP amplitude, in line with the literature reporting increased LTP levels following enrichment
+
+::: {.notes}
+
+-   Adult born - electrophysiological characteristics are initially distinct from those of mature DG neurons: they have higher input resistance, lower threshold voltage, and a slower membrane time constant and they are more prone to long-term potentiation (LTP). Since DGCs have very low firing probabilities, only a small population of DGCs is activated by these inputs at any given time, resulting in sparse representation of contexts and events. The sparseness of these DG representations---also known as ''engrams''---is thought to be crucial for creating non-overlapping (or orthogonal) responses to different experiences, thereby keeping memories distinct. The sparseness of coding in the DG is largely due to strong inhibitory inputs from interneuron populations in the DG and hilus. Sparse representations in the DG are relayed to CA3, a hippocampal area characterized by recurrent connections that is hypothesized to function as an auto-association network; it has been shown to play a role in pattern completion, i.e., to recall a memory upon an incomplete cue or only a partial activation of its neuronal representation. However, CA3 is also thought to be able to perform pattern separation, and whether it performs one or the other task seems to depend on the input it receives directly from the EC and, particularly in the case of pattern separation, from the DG. implement pattern separation and pattern completion, both essential functions for episodic memory formation and recall: the former permits generalization and recall from incomplete inputs, whereas the latter ensures that similar memories are kept distinct from each other. (goncalves et al., 2016).
+
+:::
+
+
+## NMDA
+
+::: incremental
+-   increase in neural plasticity induced by FLX administration. Such modifications in neuronal functionality may represent the mechanisms underlying the effects of the drug treatment.
+
+-   ketamine, NMDAR antagonist , produces rapid antidepressant actions [@chen2022]
+
+    -   It is postulated that this increased release of glutamate in the mPFC stimulates prefrontal output to brainstem monoaminergic nuclei, thereby increasing monoaminergic cell firing and prefrontal monoamine efflux [@Jiménez-Sánchez2014]
+
+
+
+
+:::
+
+::: {.notes}
+-   NMDARs are tetrameric ionotropic glutamate receptors, composed of two GluN1 subunits with two GluN2 or GluN3 subunits [@chen2022]
+
+-   NMDA receptor subunit expression profile, showing an increase in the GluNR2A/GluNR2B ratio
+
+-   GluN2A and GluN2B receptor subunits may be anatomically and functionally segregated and play distinct roles in the regulation of prefrontal synaptic response to different inputs carrying contextual and affective information. Thus, it has been proposed that afferents from ventral hippocampus may preferentially synapse onto postsynaptic sites containing GluN2B subunits, whereas projections from basolateral amygdala may preferentially synapse onto postsynaptic sites containing GluN2A subunits [@Jiménez-Sánchez2014]
+:::
+
+## Demaduración {.smaller}
+
+![higihara,2019](figs/higihara,2019.png)
+
+
+Más en [@kobayashi2010; @ohira2019]
+
+::: {.notes}
+-   chronic FLX induces a de-differentiation of mature dentate granule neurons in the adult hippocampus that reinstates high levels of synaptic plasticity
+
+    -   high susceptibility to environmental inputs
+
+    -   Involucrada en distintos procesos de plasticidad - Demaduración \[\@kobayashi2010; \@ohira2019\]
+
+-   Al mismo tiempo, este fármaco parece reducir el número de neuronas con redes perineuronales en el giro dentado, un fenómeno que promueve la plasticidad en el cerebro adulto.
+
+-   Podrían significar que existen otros mecanismos independientes de la NHA que reinstauren un estado de inmadurez al giro dentado que representa un sustrato importante en la cognición y regulación del comportamiento (Umemori et al., 2018).
+:::
+
+## Relevancia
+
+::: incremental
+-   Antidepressants are more effective in patients having a better quality of life
+
+    -   socioeconomic status and lifestyle
+
+-   more often to an unfavorable outcome in people living in worst conditions
+
+    -   poor-income census tract were significantly more likely to report suicidal ideation than those in the middle- and high- income census tracts [@Cohen2006; @Cohen2009]
+
+    -   strong causal effect of cognitive inflexibility reducing depression and anxiety and modified by education level (low education). The less flexibility, the larger improvement [@Jacobsen2023].
+
+-   conceptual shift in considering the modification in serotonin levels from being the cause of depression to acting as a permissive factor in the onset of and the recovery from the psychopathology
+
+    -   high serotonin levels lead to increased plasticity and thus to high susceptibility to change, which may promote either an improvement or a worsening according to the quality of the environment.
+
+-   training patients to cope with harsh conditions, for instance, through cognitive behavioral therapy,62 as it is unlikely that people can rapidly and effectively change their living milieu [@Wiles2013]
+
+:::
+
+## Referencias
+
+::: {#refs}
+:::
